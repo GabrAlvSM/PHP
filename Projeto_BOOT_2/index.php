@@ -52,12 +52,13 @@ $objUser = new Usuario();
             </div>
 
             <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" name="id_perfil">
+                <select id="mySelect">
+                <option class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" name="id_perfil">
                     Perfil de Usuario
-                </a>
+                </option>
 
                 <ul class="dropdown-menu">
-                    <li><button value="1" class="dropdown-item" name="id_perfil" id="1">ADM</input></li>
+                    <option value="1" class="dropdown-item" name="id_perfil" id="1" onclick="1">ADM</option>
                 </ul>
             </div>
 
@@ -80,18 +81,18 @@ $objUser = new Usuario();
                 echo $senha . "<br>";
                 echo $id_perfil . "<br>";
 
-                $objUser = new Usuario();
-                $objUser->id_usuario = 10;
-                $objUser->nome = $nome;
-                $objUser->email = $email;
-                $objUser->cpf = $cpf;
-                $objUser->senha = $senha;
-                $objUser->id_perfil = $id_perfil;
+                // $objUser = new Usuario();
+                // $objUser->id_usuario = 10;
+                // $objUser->nome = $nome;
+                // $objUser->email = $email;
+                // $objUser->cpf = $cpf;
+                // $objUser->senha = $senha;
+                // $objUser->id_perfil = $id_perfil;
 
-                $res = $objUser->cadastrar();
-                if ($res) {
-                    echo "<script> alert('Cadastrado com sucesso!') </script>";
-                }
+                // $res = $objUser->cadastrar();
+                // if ($res) {
+                //     echo "<script> alert('Cadastrado com sucesso!') </script>";
+                // }
             } else {
                 echo "Erro!";
             }
