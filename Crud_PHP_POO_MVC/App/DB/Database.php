@@ -31,6 +31,7 @@ class Database{
             return $stmt;
         }
         catch(PDOException $erro){
+            print_r($query);
             die("\nFalha na conecção! (fn exec) <br>". $erro->getMessage());
         }
     }

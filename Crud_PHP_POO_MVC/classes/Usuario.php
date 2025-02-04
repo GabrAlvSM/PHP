@@ -35,6 +35,23 @@ class Usuario{
         return (new Database("usuario"))->select("id_usuario =".$id_usuario)->fetchObject(self::class);
     }
 
+    public function logar($email,$senha){
+        $checalogin = (new Database("usuario"))->execute("SELECT id_usuario FROM usuario WHERE email = '$email' AND senha = '$senha';");
+        // $checalogin->bindValue(":e", $email);
+        // $checalogin->bindValue(":s", $senha);
+        // $checalogin->execute();
+        
+        if($checalogin->rowCount()>0){
+            $dados = $checalogin->fetch();
+            session_start();
+            $_SESSION["id_usuario"] = $dados["id_usuario"];
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
     public function deletar($id_usuario){
         return(new Database("usuario"))->delete("id_usuario =".$id_usuario);
     }

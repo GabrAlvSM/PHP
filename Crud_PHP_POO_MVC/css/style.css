@@ -10,15 +10,16 @@ body{
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(0, 0, 0);
     color: rgb(0, 222, 19);
+    background-color: rgba(0, 0, 0, 1);
+    
 }
 
 .nucleo{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(0, 108, 232);
+    background-color: rgba(255, 255, 255, 0.293);
     
     width: 30%;
     /* height: 30%; */
@@ -29,8 +30,14 @@ body{
     margin: 10px;
     border: 2px rgba(255, 255, 255, 0.8) dotted;
     
-    color: black;
+    color: rgb(155, 155, 155);
     font-size: 2vh;
+
+    background-image: url(../assets/img/storm_overcast_sky_night.jpg);
+    background-size: 50vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 .nucleo form{
     display: flex;
@@ -83,4 +90,29 @@ body{
 
 .cancel:hover{
     background-color: red;
+}
+
+.actions a {
+    margin-right: 5px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+
+th, td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th{
+    background-color: rgb(0, 222, 19);;
+    color: #000000;
+}
+
+tr, td{
+    background-color: #000000;
 }

@@ -2,9 +2,6 @@
 
 require './classes/Usuario.php';
 
-$waaa = new Database();
-// $waaa->conecta();
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -36,4 +33,25 @@ $waaa = new Database();
 
 <?php
 
+if(isset($_POST['email']))
+{
+    $email = addslashes($_POST['email']);
+    $senha = addslashes($_POST['senha']);
+
+    if(!empty($email) && !empty($senha))
+    {
+        $busca = new Usuario();
+        if($busca)
+        {
+            if($busca->logar($email, $senha))
+            {
+                header("location: ./listar.php");
+            }else{
+                echo "<script> alert('Dados incorretos!') </script>";
+            }
+        }
+    }else{
+        echo "<script> alert('Preencha todos os campos!') </script>";
+    }
+}
 ?>

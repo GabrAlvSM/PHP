@@ -52,15 +52,21 @@ class Usuario{
     }
 }
 
-    // $user = new Usuario();
+// $user = new Usuario();
 
-    // $user->nome = "Juliana";
-    // $user->email = "juju@email.com";
-    // $user->cpf = "22222222222";
-    // $user->senha = "123";
-    // $user->id_perfil = 1;
+// -------------------------------------------
+// // CADASTRO
+
+// $user->nome = "Juliana";
+// $user->email = "juju@email.com";
+// $user->cpf = "22222222222";
+// $user->senha = "123";
+// $user->id_perfil = 1;
 
 // print_r($user);
+
+// -------------------------------------------
+// // LISTAR
 
 // $usuarios = $user->buscar();
 
